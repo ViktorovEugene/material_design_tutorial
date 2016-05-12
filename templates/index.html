@@ -47,5 +47,11 @@
   div2.querySelector('strong').innerHTML = "Супер!";
   // вставим её после текущего сообщения
   div.parentNode.insertBefore(div2, div.nextSibling);
+
+  var first = list.children[0],
+      second = list.children[1];
+
+  // нет необходимости в предварительном removeChild(second)
+  list.insertBefore(second, first); // поменять местами
 </script>
 </html>
