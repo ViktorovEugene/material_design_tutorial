@@ -23,5 +23,29 @@
   <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
     <i class="material-icons">add</i>
   </button>
+  <ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+
 </body>
+<script>
+  var newLi = document.createElement('li');
+  newLi.innerHTML = "Привет, мир!";
+
+  list.insertBefore(newLi, list.children[2]);
+
+  var div = document.createElement('div');
+  div.className = "alert";
+  div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важно сообщение.";
+
+  document.body.insertBefore(div, document.body.firstChild);
+
+  // make a copy of the node
+  var div2 = div.cloneNode(true);
+  div2.querySelector('strong').innerHTML = "Супер!";
+  // вставим её после текущего сообщения
+  div.parentNode.insertBefore(div2, div.nextSibling);
+</script>
 </html>
